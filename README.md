@@ -21,7 +21,7 @@ for the rules this codebase follows.
 
 ## Build and run
 
-Needs a Rust toolchain (1.90+) and a [LightCraft](https://github.com/storytold/lightcraft)
+Needs a Rust toolchain (1.95+) and a [LightCraft](https://github.com/storytold/lightcraft)
 checkout next to this one at `../lightcraft` (path dependencies), at the revision pinned
 in [`siblings.json`](siblings.json). A fresh clone of this repo alone does not build —
 `cargo xtask siblings` reports what is missing or drifted, with the exact clone commands.
