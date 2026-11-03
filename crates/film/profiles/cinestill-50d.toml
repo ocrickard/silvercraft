@@ -1,0 +1,45 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "cinestill-50d"
+name = "CineStill 50D"
+manufacturer = "CineStill"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "inherited: vision3-50d anchors (no first-party sensitometry)"
+license = "MIT"
+notes = "CineStill 50D (Vision3 50D emulsion, rem-jet removed), C-41; C-41 processing raises gamma/density vs ECN-2 by an UNQUANTIFIED amount (direction only, per CineStill); render fields derived from inherited 5203 anchors. Halation not modeled."
+
+[negative]
+scene_gamma = 0.56
+layer_gamma = [0.42, 0.56, 0.53]
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = true
+
+[characterization]
+character_notes = "All curve geometry INHERITED from Vision3 50D ECN-2 anchors; actual C-41 gamma/density is higher by an unquantified amount. Daylight 5500K-balanced, ratable EI 12-100 without pushing; lower EI (more exposure) -> warmer images with more highlight halation. Halation present and exposure-dependent (same red-layer mechanism as 800T) — NOT modeled. R mid-gradient inherited from a D1->1.5 measurement (trace limit)."
+confidence = "low"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin_layers = [0.86, 0.58, 0.17]
+mid_gradients = [0.53, 0.56, 0.42]
+provenance = ["inherited: eastman kodak H-1-5203 ECN-2 anchors (CineStill publishes no H&D curves; no mask/Dmin data post-Premoval)", "cinestill product pages: C-41 produces greater density and gamma than ECN-2 (direction documented, magnitude not published)", "emulsion ID as Vision3 50D: analog.cafe (third-party), not stated by CineStill"]
+
+[characterization.curve_anchors]
+b = [[-2.0, 0.95], [-1.0, 1.44], [0.0, 1.97], [1.0, 2.51], [1.5, 2.71]]
+g = [[-2.0, 0.66], [-1.0, 1.19], [0.0, 1.74], [1.0, 2.29], [1.5, 2.5]]
+r = [[-2.0, 0.25], [-1.0, 0.72], [0.0, 1.19], [1.0, 1.64], [1.5, 1.8]]
+
+[look.print]
+contrast = 1.0
+density_scale = [0.75, 1.0, 0.946]
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 0.868
+saturation = 1.0
+white_balance = [1.0, 1.0, 1.0]

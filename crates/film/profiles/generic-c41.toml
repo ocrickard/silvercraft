@@ -1,0 +1,27 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "generic-c41"
+name = "Generic C-41"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "empirical"
+license = "MIT"
+notes = "Generic C-41 fallback develop parameters, hand-tuned; no per-stock sensitometry."
+
+[negative]
+scene_gamma = 0.6
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = true
+
+[look.print]
+density_scale = [1.0, 1.0, 1.0]
+derived = false
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 1.0

@@ -1,0 +1,17 @@
+[package]
+name = "silvercraft-imgproc"
+description = "SilverCraft image primitives: float planes, masks, filters, resampling, connected components."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+rayon.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+
+[lints]
+workspace = true

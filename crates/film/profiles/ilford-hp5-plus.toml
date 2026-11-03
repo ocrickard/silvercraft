@@ -1,0 +1,41 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "ilford-hp5-plus"
+name = "Ilford HP5 Plus"
+manufacturer = "Ilford"
+kind = "bw-negative"
+process = "BW"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet"
+license = "MIT"
+notes = "Ilford HP5 Plus, silver B&W negative; render fields derived from datasheet anchors (relative logE axis)."
+
+[negative]
+scene_gamma = 0.7
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = false
+
+[characterization]
+character_notes = "Gradient ~0.7 over the long straight line; gentle toe; slightly flatter designer contrast than Tri-X. Base+fog ~0.18, flat below rel logE ~0.5; some base fog/tint in clear areas — base-aware inversion needed. No RMS granularity published (Ilford confirms); traditional non-tabular grain, coarsens in Rodinal, tightens in DD-X/Perceptol. Digital ICE NOT usable (silver image). Curve end D ~2.1 at rel logE 3.55."
+confidence = "digitized"
+coordinate_space = "relative_loge"
+dmin = 0.18
+mid_gradient = 0.7
+provenance = ["harman/ilford HP5 Plus technical information (Nov 2018)", "digitized curve trace; ILFOTEC HC 1+31 6.5 min 20C reference curve; RELATIVE logE axis (uncalibrated) — do not merge into absolute log lux·s without a speed anchor"]
+
+[characterization.curve_anchors]
+gray = [[1.05, 0.5], [1.8, 1.0], [2.6, 1.5], [3.4, 2.0], [3.55, 2.1]]
+
+[look.print]
+contrast = 1.0
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 1.207
+saturation = 1.0
+white_balance = [1.0, 1.0, 1.0]

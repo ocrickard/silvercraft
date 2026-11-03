@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out SilverCraft
+        uses: actions/checkout@v4
+        with:
+          path: silvercraft
+
+      # Sibling revisions come from silvercraft/siblings.json (single source of
+      # truth, also read by `cargo xtask siblings --check`).
+      - name: Read sibling pins
+        id: pins
+        run: |
+          echo "lightcraft_rev=$(jq -r '.siblings[] | select(.name=="lightcraft") | .rev' silvercraft/siblings.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Check out LightCraft at the pinned revision
+        uses: actions/checkout@v4
+        with:
+          repository: storytold/lightcraft
+          ref: ${{ steps.pins.outputs.lightcraft_rev }}
+          path: lightcraft
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: "1.90"
+          components: rustfmt, clippy
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: silvercraft
+
+      - name: Verify sibling pins
+        working-directory: silvercraft
+        run: cargo xtask siblings --check
+
+      - name: CI gate (fmt, clippy, test debug+release --locked, layers)
+        working-directory: silvercraft
+        run: cargo xtask ci
+
+      - name: Release binaries build
+        working-directory: silvercraft
+        run: cargo build --workspace --release --locked

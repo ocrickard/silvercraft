@@ -1,0 +1,21 @@
+[package]
+name = "silvercraft-decode"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "SilverCraft capture decoding: camera-scan raws (orange-mask aware) and scanner TIFFs (RGB / RGBI) to linear transmittance"
+
+[lints]
+workspace = true
+
+[dependencies]
+silvercraft-film = { workspace = true }
+lightcraft-raw = { workspace = true }
+tiff = { workspace = true }
+rayon = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+toml = { workspace = true }
+proptest = { workspace = true }

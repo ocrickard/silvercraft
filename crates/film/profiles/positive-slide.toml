@@ -1,0 +1,19 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "positive-slide"
+name = "Generic Slide"
+kind = "color-positive"
+process = "E-6"
+capture = "any"
+author = "SilverCraft"
+source = "empirical"
+license = "MIT"
+notes = "Generic slide/reversal passthrough profile; no per-stock sensitometry."
+
+[positive]
+mode = "as-is"
+
+[look.print]
+derived = false

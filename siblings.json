@@ -1,0 +1,12 @@
+{
+  "comment": "Pinned sibling checkout this workspace builds against. Path dependencies point at ../lightcraft, so what HEAD that checkout sits on is part of the build. CI checks out exactly this revision; bump it deliberately (together with any code changes the bump needs), never let it drift silently. Verify with: cargo xtask siblings --check",
+  "siblings": [
+    {
+      "name": "lightcraft",
+      "dir": "../lightcraft",
+      "repo": "https://github.com/storytold/lightcraft.git",
+      "rev": "c435d143de921e8dc724245065500bc191f91102",
+      "used_for": "raw, color, meta, tiff crates (path dependencies in the workspace Cargo.toml)"
+    }
+  ]
+}

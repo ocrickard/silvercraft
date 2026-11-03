@@ -1,0 +1,38 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "ilford-xp2-super"
+name = "Ilford XP2 Super"
+manufacturer = "Ilford"
+kind = "bw-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet (see characterization)"
+license = "MIT"
+
+[negative]
+scene_gamma = 0.55
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = false
+
+[characterization]
+character_notes = "Chromogenic C-41 dye image (no silver); single layer. Long swept shoulder reaching D ~1.85-1.9 at rel logE ~4.1-4.3; highlight compression is intrinsic. Overexposure produces FINER grain (opposite of conventional film); no RMS published. Pink/red-brown base tint (residual sensitizing dye, harmless) must be neutralized when scanning; Digital ICE works. Usable EI 50-800 with unmodified C-41."
+confidence = "digitized"
+coordinate_space = "relative_loge"
+dmin = 0.26
+mid_gradient = 0.55
+provenance = ["harman/ilford XP2 Super technical information (Nov 2018)", "digitized curve trace; RELATIVE logE axis (uncalibrated) — do not merge into absolute log lux·s without a speed anchor"]
+
+[characterization.curve_anchors]
+gray = [[1.5, 0.5], [2.2, 1.0], [3.0, 1.5]]
+
+[look.print]
+density_scale = [1.0, 1.0, 1.0]
+derived = false
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 1.0

@@ -1,0 +1,44 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-tri-x-400"
+name = "Kodak Tri-X 400"
+manufacturer = "Kodak"
+kind = "bw-negative"
+process = "BW"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet"
+license = "MIT"
+notes = "Kodak Tri-X 400 (400TX), silver B&W negative; render fields derived from datasheet anchors."
+
+[negative]
+scene_gamma = 0.6
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = false
+
+[characterization]
+character_notes = "Single-layer silver B&W on Kodak's ABSOLUTE log lux·s axis (density basis is diffuse visual, not Status M). Development-dependent contrast: normal = CI 0.56; CI rises ~+0.05-0.07/min in the 5-12 min range (CI 0.8-1.0 at ~10-17 min depending on developer); 11-min curve reaches D ~2.9-3.0 at logE ~+0.2; D-76 large-tank family also published. Base+fog ~0.3, flat below logE ~-3.3; very clear base. RMS 17 measured on a previous coating generation (Tri-X 320: RMS 16)."
+confidence = "digitized"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin = 0.3
+mid_gradient = 0.6
+provenance = ["kodak alaris datasheet F-4017 (Feb 2016)", "digitized curve trace; 35mm, T-MAX developer small tank 20C 6 min (~CI 0.56); absolute log lux·s axis"]
+
+[characterization.curve_anchors]
+gray = [[-2.9, 0.5], [-1.6, 1.0], [-0.8, 1.5], [-0.55, 2.0]]
+
+[characterization.grain]
+rms_granularity_48um = 17
+
+[look.print]
+contrast = 1.0
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 1.034
+saturation = 1.0
+white_balance = [1.0, 1.0, 1.0]

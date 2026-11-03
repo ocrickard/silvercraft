@@ -1,0 +1,51 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-ultramax-400"
+name = "Kodak UltraMax 400"
+manufacturer = "Kodak"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet (see characterization)"
+license = "MIT"
+
+[negative]
+scene_gamma = 0.54
+layer_gamma = [0.43, 0.54, 0.52]
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = true
+
+[characterization]
+character_notes = "Near-parallel mid-scale; longer toe than Gold; R shoulder softens early, B stays straight; curve shape very close to Gold 200 (Kodak: printing compatible with GOLD). Saturation between Gold and Ektar; warm-leaning. R layer does not reach D2.0 in plot range (R max ~1.9 at plot end). Layer offsets at D1.0: B-G ~0.7, G-R ~0.9 (approximate; early B toe lift). Legacy -2/+3 stop latitude figure is NOT in the current datasheet."
+confidence = "digitized"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin_layers = [0.98, 0.7, 0.3]
+logh_ref = -1.44
+mid_gradients = [0.52, 0.54, 0.43]
+provenance = ["kodak alaris datasheet E-7023 (Feb 2016)", "digitized curve trace ±0.05-0.10D / ±0.05-0.10 logH"]
+
+[characterization.curve_anchors]
+b = [[-3.0, 1.0], [-2.47, 1.18], [-1.06, 2.0], [0.0, 2.65]]
+g = [[-2.47, 0.9], [-2.27, 1.0], [-0.42, 2.0], [0.0, 2.21]]
+r = [[-2.38, 0.5], [-1.37, 1.0], [0.0, 1.7]]
+
+[characterization.grain]
+pgi_135_4x6 = 46
+
+[characterization.scan_aim_red_density]
+forehead_dark = [0.85, 1.25]
+forehead_light = [1.1, 1.4]
+gray_card = [0.8, 1.0]
+lightest_step = [1.2, 1.4]
+
+[look.print]
+black_point = 0.02
+contrast = 1.2
+derived = false
+saturation = 1.2
+white_balance = [1.05, 1.0, 0.93]

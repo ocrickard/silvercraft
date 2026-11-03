@@ -1,0 +1,24 @@
+[package]
+name = "silvercraft-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "SilverCraft command line: develop captures into scene-linear DNGs and send them to LightCraft"
+
+[[bin]]
+name = "silvercraft-cli"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+silvercraft-film = { workspace = true }
+silvercraft-decode = { workspace = true }
+silvercraft-handoff = { workspace = true }
+silvercraft-config = { workspace = true }
+silvercraft-engine = { workspace = true }
+silvercraft-epson = { workspace = true }
+ctrlc = { version = "3", features = ["termination"] }
+toml = { workspace = true }
+rayon = { workspace = true }

@@ -1,0 +1,43 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-ektachrome-e100"
+name = "Kodak Ektachrome E100"
+manufacturer = "Kodak"
+kind = "color-positive"
+process = "E-6"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet"
+license = "MIT"
+notes = "Kodak Ektachrome E100, E-6; render fields derived from datasheet anchors."
+
+[positive]
+mode = "as-is"
+gamma = 1.9
+
+[characterization]
+character_notes = "Moderate for a slide — mean mid-scale gradient ~1.9; 'low contrast tone scale' [datasheet]. Curves near-coincident through mid-scale (matched color records); B highest Dmax, R lowest (B 3.7 / G 3.6 / R 3.25) -> slight warm-shadow bias, milder than Velvia. Dmin 0.1-0.2 at logE ~0.0. Useful span D 0.2->3.0 ~ 2.3 log lux·s. Neutral by design; slight cool/blue shadow cast reported by reviewers."
+confidence = "digitized"
+coordinate_space = "status_a_density_vs_logh_luxs"
+dmax_layers = [3.7, 3.6, 3.25]
+dmin = [0.1, 0.2]
+provenance = ["kodak alaris datasheet E-4000 (Aug 2018)", "digitized curve trace ±0.05-0.10D / ±0.05-0.10 logH; POSITIVE curve; channel split unreliable below D ~3.0"]
+
+[characterization.curve_anchors]
+b = [[-1.5, 2.0], [-1.05, 1.0], [-0.1, 0.2]]
+g = [[-1.5, 2.0], [-1.05, 1.0], [-0.1, 0.2]]
+r = [[-1.5, 2.0], [-1.05, 1.0], [-0.1, 0.2]]
+
+[characterization.grain]
+rms_granularity_48um = 8
+
+[look.print]
+contrast = 1.0
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 1.0
+saturation = 1.0
+white_balance = [1.0, 1.0, 1.0]

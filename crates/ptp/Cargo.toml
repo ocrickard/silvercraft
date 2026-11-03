@@ -1,0 +1,18 @@
+[package]
+name = "silvercraft-ptp"
+description = "SilverCraft PTP: container codec, sessions, Sony SDIO extension, capture and live view, and the auto-capture state machine."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+silvercraft-usb.workspace = true
+thiserror.workspace = true
+log.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+
+[lints]
+workspace = true

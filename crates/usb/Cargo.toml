@@ -1,0 +1,15 @@
+[package]
+name = "silvercraft-usb"
+description = "SilverCraft USB transport: a small bulk/interrupt transport trait over nusb, plus scripted and recording fakes for tests."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+log.workspace = true
+nusb.workspace = true
+
+[lints]
+workspace = true

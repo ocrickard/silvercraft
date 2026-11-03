@@ -1,0 +1,23 @@
+[package]
+name = "silvercraft-detect"
+description = "SilverCraft frame detection: flatbed prescan strips and frames, camera-scan frame boxes with deskew, live-view frame measurement for autocapture."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+silvercraft-imgproc.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+rayon.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+toml.workspace = true
+tiff.workspace = true
+silvercraft-decode.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

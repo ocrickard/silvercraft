@@ -1,0 +1,24 @@
+[package]
+name = "silvercraft-ui-egui"
+description = "SilverCraft egui frontend: scanner and camera capture workflows, roll development, stocks."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+silvercraft-engine.workspace = true
+silvercraft-film.workspace = true
+silvercraft-config.workspace = true
+silvercraft-epson.workspace = true
+silvercraft-ptp.workspace = true
+egui.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+log.workspace = true
+
+[dev-dependencies]
+jpeg-encoder = { version = "0.7", default-features = false, features = ["std"] }
+
+[lints]
+workspace = true

@@ -1,0 +1,22 @@
+[package]
+name = "silvercraft-scanfix"
+description = "SilverCraft scanner-artifact detection and repair: CCD line defects, row banding and the scan health report."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+silvercraft-imgproc.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+rayon.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+toml.workspace = true
+# Reads 16-bit scanner TIFFs in examples/real_scan.rs.
+tiff.workspace = true
+
+[lints]
+workspace = true

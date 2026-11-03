@@ -1,0 +1,45 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "cinestill-800t"
+name = "CineStill 800T"
+manufacturer = "CineStill"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "inherited: vision3-500t anchors (no first-party sensitometry)"
+license = "MIT"
+notes = "CineStill 800T (Vision3 500T emulsion, rem-jet removed), C-41; C-41 processing raises gamma/density vs ECN-2 by an UNQUANTIFIED amount (direction only, per CineStill); render fields derived from inherited 5219 anchors. Halation not modeled."
+
+[negative]
+scene_gamma = 0.53
+layer_gamma = [0.45, 0.53, 0.5]
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = true
+
+[characterization]
+character_notes = "All curve geometry INHERITED from Vision3 500T ECN-2 anchors; actual C-41 gamma/density is higher by an unquantified amount. Tungsten 3200K-balanced; blue layer higher speed than the nominal EI 800; uncorrected daylight -> teal cast; slight tendency to oversaturate reds in tungsten. Signature red halation around bright points (rem-jet removed; base/pressure-plate reflection exposes the red-sensitive layer) — mechanism documented, magnitude unquantified, NOT modeled. R mid-gradient inherited from a D1->1.5 measurement (trace limit)."
+confidence = "low"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin_layers = [0.84, 0.59, 0.19]
+mid_gradients = [0.5, 0.53, 0.45]
+provenance = ["inherited: eastman kodak H-1-5219 ECN-2 anchors (CineStill publishes no H&D curves; Dmin after Premoval unpublished, ~5219 assumed unverified)", "cinestill product pages/FAQ: C-41 produces greater density and gamma than ECN-2 (direction documented, magnitude not published)", "emulsion ID as Vision3 500T 5219: analog.cafe (third-party)"]
+
+[characterization.curve_anchors]
+b = [[-3.0, 0.93], [-2.0, 1.39], [-1.0, 1.9], [0.0, 2.41], [0.5, 2.62]]
+g = [[-3.0, 0.69], [-2.0, 1.15], [-1.0, 1.68], [0.0, 2.2], [0.5, 2.42]]
+r = [[-3.0, 0.29], [-2.0, 0.68], [-1.0, 1.13], [0.0, 1.57], [0.5, 1.75]]
+
+[look.print]
+contrast = 1.0
+density_scale = [0.849, 1.0, 0.943]
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 0.851
+saturation = 1.0
+white_balance = [1.0, 1.0, 1.0]

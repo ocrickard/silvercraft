@@ -1,0 +1,43 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "fuji-provia-100f"
+name = "Fujifilm Provia 100F"
+manufacturer = "Fujifilm"
+kind = "color-positive"
+process = "E-6"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet"
+license = "MIT"
+notes = "Fuji Provia 100F (RDPIII), E-6; render fields derived from datasheet anchors."
+
+[positive]
+mode = "as-is"
+gamma = 2.0
+
+[characterization]
+character_notes = "Neutral-reference slide of the Fuji group; near-identical shared curve across layers. Dmax nearly balanced (spread <= 0.15; G marginally highest -> at most a whisper of magenta in shadows) — unlike Velvia's warm-shadow asymmetry. Dmin 0.08-0.1 all layers, reached ~ logH +0.4. Medium saturation/contrast vs Velvia; greens stay realistic. 'Signature green tint' claim is anecdote-level and in tension with the near-neutral datasheet curves."
+confidence = "digitized"
+coordinate_space = "status_a_density_vs_logh_luxs"
+dmax_layers = [3.35, 3.45, 3.3]
+dmin = [0.08, 0.1]
+provenance = ["fujifilm datasheet AF3-036E (Oct 2000)", "digitized curve trace ±0.05-0.10D / ±0.05-0.10 logH; POSITIVE curve (density falls with exposure)"]
+
+[characterization.curve_anchors]
+b = [[-1.55, 2.0], [-1.05, 1.0], [-0.2, 0.2]]
+g = [[-1.55, 2.0], [-1.05, 1.0], [-0.2, 0.2]]
+r = [[-1.55, 2.0], [-1.05, 1.0], [-0.2, 0.2]]
+
+[characterization.grain]
+rms_granularity_48um = 8
+
+[look.print]
+contrast = 1.0
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 1.0
+saturation = 1.0
+white_balance = [1.0, 1.0, 1.0]

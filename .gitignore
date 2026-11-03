@@ -1,0 +1,16 @@
+*~
+/target
+/dist
+/corpus
+/log
+.DS_Store
+.claude/
+*.onnx
+*.safetensors
+
+# local scan output and logs
+/silvercraft-out/
+*.traffic.log
+/log/
+.thumbs/
+developed/

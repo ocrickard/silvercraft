@@ -1,0 +1,29 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-portra-400-prior"
+name = "Kodak Portra 400 (prior tune)"
+manufacturer = "Kodak"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "empirical"
+license = "MIT"
+notes = "Prior hand-tuned Portra 400 calibration, retained for comparison with the roll-consistent develop. [silvercraft: layer_gamma derived from the legacy density_scale as density_scale_c * scene_gamma]"
+
+[negative]
+scene_gamma = 0.6
+layer_gamma = [0.564, 0.6, 0.648]
+low_percentile = 0.25
+high_percentile = 99.35
+gray_percentile = 50.0
+neutralize = true
+
+[look.print]
+density_scale = [0.94, 1.0, 1.08]
+derived = false
+exposure = 1.04
+paper_black = 0.0
+paper_grade = 0.9

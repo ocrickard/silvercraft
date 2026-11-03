@@ -1,0 +1,34 @@
+[package]
+name = "silvercraft-engine"
+description = "SilverCraft engine: roll development pipeline and live scanning workflows shared by the CLI and the app."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+silvercraft-film.workspace = true
+silvercraft-decode.workspace = true
+silvercraft-handoff.workspace = true
+silvercraft-config.workspace = true
+silvercraft-heal.workspace = true
+silvercraft-scanfix.workspace = true
+silvercraft-detect.workspace = true
+silvercraft-epson.workspace = true
+silvercraft-ptp.workspace = true
+silvercraft-usb.workspace = true
+zune-jpeg.workspace = true
+zune-core.workspace = true
+tiff.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+log.workspace = true
+toml.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+jpeg-encoder = { version = "0.7", default-features = false, features = ["std"] }
+
+[lints]
+workspace = true

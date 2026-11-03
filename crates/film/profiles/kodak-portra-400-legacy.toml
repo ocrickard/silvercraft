@@ -1,0 +1,35 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-portra-400-legacy"
+name = "Kodak Portra 400 (legacy hand tune)"
+manufacturer = "Kodak"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "empirical (hand-tuned)"
+license = "MIT"
+notes = "The original hand-tuned Portra 400 look, kept addressable for existing libraries; superseded by the datasheet-derived kodak-portra-400."
+
+[negative]
+scene_gamma = 0.6
+low_percentile = 0.28
+high_percentile = 99.82
+gray_percentile = 50.0
+neutralize = false
+
+[look.print]
+black_point = 0.02
+contrast = 1.25
+density_scale = [1.0, 1.0, 1.0]
+derived = false
+exposure = 1.0
+foliage_darken = 0.04
+foliage_desat = 0.2
+foliage_hue_shift = 8.0
+paper_black = 0.0
+paper_grade = 1.0
+saturation = 1.08
+white_balance = [1.04, 1.0, 0.96]

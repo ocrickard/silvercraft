@@ -1,0 +1,56 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-portra-400"
+name = "Kodak Portra 400"
+manufacturer = "Kodak"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet (density_scale) + qualitative look"
+license = "MIT"
+notes = "Kodak Portra 400; density_scale derived from the E-4050 datasheet anchors (tools/derive_profile_params.py). Three editorial fields, all qualitative and all listed in the tool: neutralize_gray was FALSE here and nowhere else in the registry - inherited from the hand tune this entry replaced but without the white balance that compensated for it, so every capture cast passed straight through. white_balance and sat_curve come from the datasheet's own character notes ('medium saturation; warm-neutral, flattering skin'; 'remarkably linear shoulder ... deep highlight headroom'). paper_grade/saturation are a PRINT choice, not a measurement: this stock is the derivation anchor, so its paper_grade is 1.0 by construction - that says the layer gradients match themselves, nothing about print brightness, and the pipeline's neutral rendered these scans dark and flat (median 61 of 255). Contrast and black_point stay neutral; the old hand tune's contrast 1.25 made it DARKER still (median 40) and blew twenty times as many highlights."
+
+[negative]
+scene_gamma = 0.55
+layer_gamma = [0.57, 0.55, 0.62]
+low_percentile = 0.28
+high_percentile = 99.82
+gray_percentile = 50.0
+neutralize = true
+
+[characterization]
+character_notes = "Near-parallel mid-scale; long toe; remarkably linear shoulder (B slope only 0.62 -> ~0.35 in last log unit) = deep highlight headroom. Medium saturation; warm-neutral, flattering skin. Layer offsets at D1.0: B-G 0.57, G-R 0.86 (mostly mask)."
+confidence = "digitized"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin_layers = [0.89, 0.65, 0.21]
+logh_ref = -1.44
+mid_gradients = [0.62, 0.55, 0.57]
+provenance = ["kodak alaris datasheet E-4050 (Feb 2016)", "digitized curve trace ±0.05-0.10D / ±0.05-0.10 logH, ISO-validated"]
+
+[characterization.curve_anchors]
+b = [[-2.67, 1.0], [-2.51, 1.09], [-1.07, 2.0], [0.0, 2.69]]
+g = [[-2.36, 0.85], [-2.1, 1.0], [-0.29, 2.0], [0.0, 2.16]]
+r = [[-2.36, 0.41], [-1.24, 1.0], [0.53, 2.0], [0.0, 1.69]]
+
+[characterization.grain]
+pgi_135_4x6 = 37
+
+[characterization.scan_aim_red_density]
+forehead_dark = [0.93, 1.03]
+forehead_light = [1.08, 1.18]
+gray_card = [0.77, 0.87]
+lightest_step = [1.13, 1.23]
+
+[look.print]
+contrast = 1.0
+density_scale = [1.036, 1.0, 1.127]
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 0.82
+sat_curve = [[0.0, 1.0], [0.6, 1.0], [1.0, 0.85]]
+saturation = 1.18
+white_balance = [1.04, 1.0, 0.96]

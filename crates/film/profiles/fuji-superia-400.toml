@@ -1,0 +1,47 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "fuji-superia-400"
+name = "Fujifilm Superia X-TRA 400"
+manufacturer = "Fujifilm"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet (see characterization)"
+license = "MIT"
+
+[negative]
+scene_gamma = 0.6
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = true
+
+[characterization]
+character_notes = "Contrastier consumer curve (vs Pro 400H); curve end at logH +0.2: B 2.85 / G 2.5 / R 2.05. Layer offsets B-G ~0.3, G-R ~0.3-0.35 logH with parallel mid-slopes — smaller offsets than Kodak stocks; toe floors diverge per layer. No D1->2 mid gradients digitized (field omitted). The 2003 generation (AF3-151E) HAS the 4th cyan color layer for fluorescent/mixed light; the 2006 generation profiled here does NOT. Slight green bias reported; green-shadow / teal-gray channel coupling. Discontinued 2024."
+confidence = "digitized"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin_layers = [0.72, 0.45, 0.12]
+provenance = ["fujifilm datasheet AF3-0217E (Oct 2006 generation, Superia X-Tra 400)", "digitized curve trace ±0.05-0.10D / ±0.05-0.10 logH + independent digitization cross-check"]
+
+[characterization.curve_anchors]
+b = [[-2.2, 1.0], [-0.85, 2.0], [0.2, 2.85]]
+g = [[-1.9, 1.0], [-0.55, 2.0], [0.2, 2.5]]
+r = [[-3.3, 0.2], [-1.5, 1.0], [-0.25, 2.0], [0.2, 2.05]]
+
+[characterization.grain]
+rms_granularity_48um = 4
+
+[characterization.scan_aim_red_density]
+gray_card = [0.75, 0.95]
+
+[look.print]
+black_point = 0.02
+contrast = 1.18
+derived = false
+foliage_desat = 0.1
+foliage_hue_shift = 6.0
+saturation = 1.16
+white_balance = [0.98, 1.02, 1.02]

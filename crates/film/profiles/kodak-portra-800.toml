@@ -1,0 +1,54 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-portra-800"
+name = "Kodak Portra 800"
+manufacturer = "Kodak"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet"
+license = "MIT"
+notes = "Kodak Portra 800, C-41; render fields derived from datasheet anchors."
+
+[negative]
+scene_gamma = 0.54
+layer_gamma = [0.39, 0.54, 0.41]
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = true
+
+[characterization]
+character_notes = "Low contrast with distinctively soft B/R shoulders while G stays linear = highlight compression in blue/red records; toe short-to-medium. Deepest mask of the Kodak C-41 group (B D=1.0 ~ Dmin, at toe). R layer does not reach D2.0 in plot range (R max ~1.9 at plot end). Layer offsets at D1.5: B-G 0.55, G-R 0.85. Warm highlights reported vs 160/400."
+confidence = "digitized"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin_layers = [1.02, 0.71, 0.32]
+logh_ref = -1.74
+mid_gradients = [0.41, 0.54, 0.39]
+provenance = ["kodak alaris datasheet E-4040 (Feb 2016)", "digitized curve trace ±0.05-0.10D / ±0.05-0.10 logH, ISO-validated; EI 1600/3200 push curves published but not digitized"]
+
+[characterization.curve_anchors]
+b = [[-3.7, 1.0], [-2.62, 1.22], [-1.29, 2.0], [0.0, 2.78]]
+g = [[-2.63, 0.91], [-2.47, 1.0], [-0.6, 2.0], [0.0, 2.3]]
+r = [[-2.53, 0.52], [-1.57, 1.0], [0.0, 1.81]]
+
+[characterization.grain]
+pgi_135_4x6 = 48
+
+[characterization.scan_aim_red_density]
+gray_card_ei1600 = [0.85, 1.05]
+gray_card_ei3200 = [0.95, 1.15]
+gray_card_ei800 = [0.75, 0.95]
+
+[look.print]
+contrast = 1.0
+density_scale = [0.722, 1.0, 0.759]
+derived = true
+exposure = 1.0
+paper_black = 0.0
+paper_grade = 0.77
+saturation = 1.0
+white_balance = [1.0, 1.0, 1.0]

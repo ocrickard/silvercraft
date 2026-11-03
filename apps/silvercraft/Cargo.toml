@@ -1,0 +1,25 @@
+[package]
+name = "silvercraft"
+description = "SilverCraft: film scanning (Epson flatbed, tethered camera) into LightCraft"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[[bin]]
+name = "silvercraft"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+silvercraft-ui-egui.workspace = true
+silvercraft-engine.workspace = true
+silvercraft-epson.workspace = true
+silvercraft-film.workspace = true
+silvercraft-config.workspace = true
+silvercraft-detect.workspace = true
+eframe = { workspace = true, features = ["default_fonts", "wgpu", "accesskit", "wayland", "x11"] }
+egui.workspace = true
+log.workspace = true

@@ -1,0 +1,51 @@
+# SilverCraft film profile.
+# [look.print] keeps the print/look fields.
+
+schema = "silvercraft/profile/1"
+id = "kodak-portra-160"
+name = "Kodak Portra 160"
+manufacturer = "Kodak"
+kind = "color-negative"
+process = "C-41"
+capture = "any"
+author = "SilverCraft"
+source = "datasheet (see characterization)"
+license = "MIT"
+
+[negative]
+scene_gamma = 0.54
+layer_gamma = [0.54, 0.54, 0.6]
+low_percentile = 0.5
+high_percentile = 99.5
+gray_percentile = 50.0
+neutralize = true
+
+[characterization]
+character_notes = "Lowest mid-scale gradient of the Kodak C-41 group (R gradient stated as ~0.54, approximate). Near-parallel mid-scale; long gradual toe; soft shoulder above D~2.3 (B). Medium-low saturation; warm-neutral, optimized for natural skin tones. R layer does not reach D2.0 in plot range (R max ~1.75 at plot end). Layer offsets at D1.0: B-G 0.52, G-R 0.88 (mostly mask)."
+confidence = "digitized"
+coordinate_space = "status_m_density_vs_logh_luxs"
+dmin_layers = [0.84, 0.65, 0.22]
+logh_ref = -1.051
+mid_gradients = [0.6, 0.54, 0.54]
+provenance = ["kodak alaris datasheet E-4051 (Feb 2016)", "digitized curve trace ±0.05-0.10D / ±0.05-0.10 logH, ISO-validated"]
+
+[characterization.curve_anchors]
+b = [[-2.14, 1.0], [-2.07, 1.04], [-0.46, 2.0], [0.0, 2.31]]
+g = [[-1.89, 0.85], [-1.62, 1.0], [0.23, 2.0], [0.0, 1.89]]
+r = [[-1.84, 0.42], [-0.74, 1.0], [0.0, 1.4]]
+
+[characterization.grain]
+pgi_135_4x6 = 28
+
+[characterization.scan_aim_red_density]
+forehead_dark = [0.95, 1.05]
+forehead_light = [1.1, 1.2]
+gray_card = [0.79, 0.89]
+lightest_step = [1.15, 1.25]
+
+[look.print]
+black_point = 0.01
+contrast = 1.08
+derived = false
+saturation = 1.02
+white_balance = [1.03, 1.0, 0.98]

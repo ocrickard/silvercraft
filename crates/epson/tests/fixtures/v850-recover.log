@@ -1,0 +1,7 @@
+# Epson V850 replay fixture: 'v800_bringup recover' (fast path: the first status probe is already clean idle, so recovery stops there).
+# Captured 2026-10-09 from an Epson Perfection V850 (04b8:0151) on Linux during live bring-up, recorded by crates/epson/examples/v800_bringup.rs (RecordingTransport, payloads cut at 256 bytes) in a fresh process, so carriage calibration started Unknown.
+# '# --- open handle k ---' lines mark each fresh USB handle the session opened.
+# Scrubbed by crates/epson/examples/scrub_traffic.rs: 0 device payloads longer than 512 bytes (0 bytes of raster) replaced by z:LEN zero runs; host writes and short replies verbatim.
+# --- open handle 1 ---
+out 1b46
+in 512 02120000
