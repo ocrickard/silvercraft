@@ -19,6 +19,27 @@ Status: early development; the scanner and camera paths have been run on real ha
 (Epson Perfection V850, Sony α1). See [docs/app.md](docs/app.md) for the workflow and `CLAUDE.md`
 for the rules this codebase follows.
 
+## Screenshots
+
+Captured with the built-in scanner simulator (`--simulate-scanner`) and a synthetic
+demo roll.
+
+Bed prescan with detected frames, stock list and scan options:
+
+![Flatbed scanner: bed prescan with a detected frame](docs/images/scanner.png)
+
+Developing a roll (thumbnails are written as each frame develops):
+
+![Rolls: a developed roll ready to send to LightCraft](docs/images/rolls.png)
+
+The frame viewer (developed positive, crop and rotation):
+
+![Frame viewer showing a developed frame](docs/images/viewer.png)
+
+Built-in stock profiles are plain TOML, shown here for Kodak Portra 400:
+
+![Film stock profile for Kodak Portra 400](docs/images/stocks.png)
+
 ## Build and run
 
 Needs a Rust toolchain (1.95+) and a [LightCraft](https://github.com/storytold/lightcraft)
