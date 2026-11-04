@@ -323,10 +323,8 @@ fn detect_canonical(p: &Plane, cfg: &BandingConfig) -> Result<Banding> {
     let mut y = 0;
     while y < h {
         match rows[y] {
-            Some(g) if g.abs() <= hi_dev => {
-                if pervasive || banded_shape(y, g) {
-                    out.banded.push(LineGain { index: y, gain: g.exp() });
-                }
+            Some(g) if g.abs() <= hi_dev && (pervasive || banded_shape(y, g)) => {
+                out.banded.push(LineGain { index: y, gain: g.exp() });
             }
             Some(_) => {
                 // A run of strong rows: transients are isolated, content (a frame gap) is not; and
